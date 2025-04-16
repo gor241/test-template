@@ -1,0 +1,32 @@
+.card {
+  border-radius: $border-radius-lg;
+  background-color: $color-background;
+}
+
+// Варианты
+.default {
+  border: 1px solid $color-border;
+}
+
+.outline {
+  border: 1px solid $color-border;
+  box-shadow: none;
+}
+
+.shadow {
+  border: none;
+  box-shadow: $shadow-md;
+}
+
+// Padding
+.padding-sm {
+  padding: $spacing-sm;
+}
+
+.padding-md {
+  padding: $spacing-md;
+}
+
+.padding-lg {
+  padding: $spacing-lg;
+}
