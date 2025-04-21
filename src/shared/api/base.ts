@@ -15,24 +15,24 @@ const apiInstance = axios.create({
 
 // Перехватчик запросов
 apiInstance.interceptors.request.use(
-  (config) => {
+  config => {
     // Здесь можно добавить токен авторизации или другие заголовки
     const token = localStorage.getItem('auth_token');
-    
+
     if (token && config.headers) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-    
+
     return config;
   },
-  (error) => {
+  error => {
     return Promise.reject(error);
   }
 );
 
 // Перехватчик ответов
 apiInstance.interceptors.response.use(
-  (response) => response,
+  response => response,
   (error: AxiosError) => {
     // Обработка ошибок ответа
     if (error.response?.status === 401) {
@@ -40,7 +40,7 @@ apiInstance.interceptors.response.use(
       localStorage.removeItem('auth_token');
       // Редирект на страницу логина может быть добавлен здесь
     }
-    
+
     return Promise.reject(error);
   }
 );
@@ -48,17 +48,17 @@ apiInstance.interceptors.response.use(
 // Типизированные методы для запросов
 export const api = {
   get: <T>(url: string, config?: AxiosRequestConfig) =>
-    apiInstance.get<T, AxiosResponse<T>>(url, config).then((res) => res.data),
-  
+    apiInstance.get<T, AxiosResponse<T>>(url, config).then(res => res.data),
+
   post: <T>(url: string, data?: unknown, config?: AxiosRequestConfig) =>
-    apiInstance.post<T, AxiosResponse<T>>(url, data, config).then((res) => res.data),
-  
+    apiInstance.post<T, AxiosResponse<T>>(url, data, config).then(res => res.data),
+
   put: <T>(url: string, data?: unknown, config?: AxiosRequestConfig) =>
-    apiInstance.put<T, AxiosResponse<T>>(url, data, config).then((res) => res.data),
-  
+    apiInstance.put<T, AxiosResponse<T>>(url, data, config).then(res => res.data),
+
   patch: <T>(url: string, data?: unknown, config?: AxiosRequestConfig) =>
-    apiInstance.patch<T, AxiosResponse<T>>(url, data, config).then((res) => res.data),
-  
+    apiInstance.patch<T, AxiosResponse<T>>(url, data, config).then(res => res.data),
+
   delete: <T>(url: string, config?: AxiosRequestConfig) =>
-    apiInstance.delete<T, AxiosResponse<T>>(url, config).then((res) => res.data),
-}; 
+    apiInstance.delete<T, AxiosResponse<T>>(url, config).then(res => res.data),
+};

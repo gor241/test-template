@@ -8,20 +8,6 @@ export interface ContainerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
 }
 
-export const Container: FC<ContainerProps> = ({
-  children,
-  className,
-  size = 'lg',
-}) => {
-  return (
-    <div
-      className={clsx(
-        styles.container,
-        styles[size],
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-}; 
+export const Container: FC<ContainerProps> = ({ children, className, size = 'lg' }) => {
+  return <div className={clsx(styles.container, styles[size], className)}>{children}</div>;
+};

@@ -1,33 +1,34 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    /* Базовые опции проекта */
+    "composite": true,                     /* Позволяет использовать проект в составной структуре с references */
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", /* Путь для хранения кэша компиляции */
+    "target": "ES2020",                    /* Версия JavaScript, к которой компилируется код (ES2020 поддерживает современные возможности) */
+    "useDefineForClassFields": true,       /* Использует оператор define для инициализации полей класса (ES2022+ поведение) */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], /* Библиотеки типов, доступные проекту */
+    "module": "ESNext",                    /* Формат генерируемых модулей (ESNext - современный ES modules) */
+    "skipLibCheck": true,                  /* Пропускает проверку типов в файлах .d.ts из библиотек */
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "emitDeclarationOnly": true,
-    "jsx": "react-jsx",
+    /* Настройки для бандлера (Vite/Webpack) */
+    "moduleResolution": "bundler",         /* Стратегия разрешения модулей для бандлеров */
+    "allowImportingTsExtensions": true,    /* Разрешает импорт файлов с расширением .ts/.tsx без необходимости их явного указания */
+    "isolatedModules": true,               /* Убеждается, что каждый файл компилируется изолированно (требуется для Vite/esbuild) */
+    "moduleDetection": "force",            /* Принудительно рассматривает все файлы как модули */
+    "emitDeclarationOnly": true,           /* Генерирует только файлы деклараций (.d.ts), без JavaScript */
+    "jsx": "react-jsx",                    /* Поддержка JSX для React 17+ (без необходимости import React) */
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+    /* Настройки проверки кода */
+    "strict": true,                        /* Включает все строгие проверки TypeScript */
+    "noUnusedLocals": true,                /* Ошибка при неиспользуемых локальных переменных */
+    "noUnusedParameters": true,            /* Ошибка при неиспользуемых параметрах функций */
+    "noFallthroughCasesInSwitch": true,    /* Ошибка при отсутствии break в case блоках switch */
+    "noUncheckedSideEffectImports": true,  /* Проверяет побочные эффекты при импорте */
     
-    /* Paths */
-    "baseUrl": ".",
+    /* Настройки импорта */
+    "baseUrl": ".",                        /* Базовый URL для разрешения не относительных имен модулей */
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"]                     /* Алиас для импорта из src директории с префиксом @ */
     }
   },
-  "include": ["src"]
+  "include": ["src"]                       /* Файлы, включаемые в компиляцию */
 }

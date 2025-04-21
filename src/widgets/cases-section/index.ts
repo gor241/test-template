@@ -1,1 +1,1 @@
-export { default as CasesSection } from './ui/CasesSection'; 
+export { default as CasesSection } from './ui/CasesSection';

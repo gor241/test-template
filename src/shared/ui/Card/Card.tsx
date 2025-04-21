@@ -27,4 +27,4 @@ export const Card: FC<CardProps> = ({
       {children}
     </div>
   );
-}; 
+};

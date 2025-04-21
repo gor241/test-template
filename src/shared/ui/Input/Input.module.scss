@@ -36,7 +36,7 @@
 
   &.hasError {
     border-color: red;
-    
+
     &:focus {
       box-shadow: 0 0 0 3px rgba(red, 0.2);
     }
@@ -44,7 +44,7 @@
 }
 
 .leftIcon,
- .rightIcon {
+.rightIcon {
   position: absolute;
   display: flex;
   align-items: center;

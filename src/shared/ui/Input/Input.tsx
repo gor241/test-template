@@ -16,10 +16,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={clsx(styles.container, fullWidth && styles.fullWidth, className)}>
         {label && <label className={styles.label}>{label}</label>}
-        
+
         <div className={styles.inputWrapper}>
           {leftIcon && <div className={styles.leftIcon}>{leftIcon}</div>}
-          
+
           <input
             ref={ref}
             className={clsx(
@@ -30,12 +30,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             )}
             {...props}
           />
-          
+
           {rightIcon && <div className={styles.rightIcon}>{rightIcon}</div>}
         </div>
-        
+
         {error && <div className={styles.error}>{error}</div>}
       </div>
     );
   }
-); 
+);

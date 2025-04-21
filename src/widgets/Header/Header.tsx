@@ -1,37 +1,43 @@
-import { FC } from 'react';
-import { Link } from 'react-router-dom';
-import { Container } from '@/shared/ui';
+import React from 'react';
 import styles from './Header.module.scss';
 
-export interface HeaderProps {
-  className?: string;
-}
-
-export const Header: FC<HeaderProps> = ({ className }) => {
+export const Header = () => {
   return (
     <header className={styles.header}>
-      <Container>
-        <div className={styles.content}>
-          <Link to="/" className={styles.logo}>
-            FSD Starter
-          </Link>
-          
-          <nav className={styles.nav}>
-            <ul className={styles.navList}>
-              <li>
-                <Link to="/" className={styles.navLink}>
-                  Главная
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className={styles.navLink}>
-                  О проекте
-                </Link>
-              </li>
-            </ul>
-          </nav>
+      <div className={styles.headerContent}>
+        <div className={styles.logo}>mrk.</div>
+
+        <div className={styles.headerRight}>
+          <button className={styles.selfService}>
+            <span>self service</span>
+            <div className={styles.selfServiceLine}></div>
+            <span className={styles.discount}>20% off</span>
+          </button>
         </div>
-      </Container>
+
+        <h1 className={styles.heading}>front-end.web(developer)</h1>
+
+        <nav className={styles.nav}>
+          <div className={styles.navItem}>
+            <div className={styles.activeIndicator}></div>
+            <span>home</span>
+          </div>
+          <div className={styles.navItem}>
+            <span>cases</span>
+          </div>
+          <div className={styles.navItem}>
+            <span>projects</span>
+          </div>
+          <div className={styles.navItem}>
+            <span>about me</span>
+          </div>
+          <div className={styles.navItem}>
+            <span>contact</span>
+          </div>
+        </nav>
+
+        <button className={styles.darkModeToggle}>dark mode.</button>
+      </div>
     </header>
   );
-}; 
+};

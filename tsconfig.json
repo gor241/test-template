@@ -1,35 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    /* Базовые опции компилятора */
+    "target": "es5",                      /* Целевая версия ECMAScript для компиляции */
+    "lib": [                              /* Библиотеки типов, доступные проекту */
+      "dom",                              /* Типы для работы с DOM */
+      "dom.iterable",                     /* Поддержка итерации DOM-коллекций */
+      "esnext"                            /* Типы для новейших возможностей ECMAScript */
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": ".",
+    "allowJs": true,                      /* Разрешает импортировать JS-файлы */
+    "skipLibCheck": true,                 /* Пропускает проверку типов в .d.ts файлах библиотек */
+    "esModuleInterop": true,              /* Исправляет несоответствия между импортами ES и CommonJS */
+    "allowSyntheticDefaultImports": true, /* Разрешает импорт модулей без экспорта по умолчанию как import x from 'y' */
+    
+    /* Строгая типизация */
+    "strict": true,                       /* Включает все строгие проверки TypeScript */
+    "forceConsistentCasingInFileNames": true, /* Проверяет корректность регистра в импортах файлов */
+    "noFallthroughCasesInSwitch": true,   /* Ошибка при отсутствии break в case блоках switch */
+    
+    /* Настройки модулей */
+    "module": "esnext",                   /* Формат генерируемых модулей */
+    "moduleResolution": "node",           /* Стратегия разрешения модулей (node используется для npm пакетов) */
+    "resolveJsonModule": true,            /* Разрешает импортировать .json файлы */
+    "isolatedModules": true,              /* Каждый файл компилируется изолированно */
+    "noEmit": true,                       /* Не генерирует выходные файлы (это делает бандлер) */
+    "jsx": "react-jsx",                   /* Поддержка JSX для React 17+ */
+    
+    /* Настройки импорта */
+    "baseUrl": ".",                       /* Базовый URL для разрешения не относительных имен модулей */
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"]                    /* Алиас для импорта из src директории с префиксом @ */
     }
   },
-  "include": [
+  "include": [                            /* Файлы для включения в компиляцию */
     "src"
   ],
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "files": [],                            /* Список конкретных файлов для компиляции (пустой - используется include) */
+  "references": [                         /* Ссылки на проекты для составной компиляции */
+    { "path": "./tsconfig.app.json" },    /* Конфигурация для компиляции приложения */
+    { "path": "./tsconfig.node.json" }    /* Конфигурация для node-окружения (Vite конфиг) */
   ]
 }

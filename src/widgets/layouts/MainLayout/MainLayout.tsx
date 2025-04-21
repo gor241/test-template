@@ -17,4 +17,4 @@ export const MainLayout: FC = () => {
       <Footer />
     </div>
   );
-}; 
+};

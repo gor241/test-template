@@ -1,25 +1,28 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    /* Настройки проекта */
+    "composite": true,                   /* Включает режим составного проекта для ссылок */
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", /* Кэш компилятора для быстрой перекомпиляции */
+    
+    /* Базовые опции компилятора */
+    "target": "ES2022",                  /* Целевая версия ECMAScript (ES2022 имеет большинство современных возможностей) */
+    "lib": ["ES2023"],                   /* Библиотеки типов для новейших возможностей ECMAScript */
+    "module": "ESNext",                  /* Формат модулей (ESNext для современных ES модулей) */
+    "skipLibCheck": true,                /* Пропускает проверку типов библиотечных .d.ts файлов */
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "emitDeclarationOnly": true,
+    /* Настройки для бандлера */
+    "moduleResolution": "bundler",       /* Алгоритм разрешения модулей для бандлеров (Vite, esbuild) */
+    "allowImportingTsExtensions": true,  /* Разрешает импорты с .ts расширениями */
+    "isolatedModules": true,             /* Гарантирует, что каждый файл можно безопасно транспилировать отдельно */
+    "moduleDetection": "force",          /* Принудительно считает все файлы модулями */
+    "emitDeclarationOnly": true,         /* Генерировать только .d.ts файлы, без JS */
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Проверки кода */
+    "strict": true,                      /* Включает все строгие проверки TypeScript */
+    "noUnusedLocals": true,              /* Ошибка при объявлении неиспользуемых локальных переменных */
+    "noUnusedParameters": true,          /* Ошибка при объявлении неиспользуемых параметров функций */
+    "noFallthroughCasesInSwitch": true,  /* Предотвращает неявные сквозные case в switch */
+    "noUncheckedSideEffectImports": true /* Проверяет side-эффекты при импорте */
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"]          /* Включает только конфигурацию Vite для компиляции */
 }

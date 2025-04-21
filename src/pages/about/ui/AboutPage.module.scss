@@ -10,12 +10,12 @@
 
 .section {
   margin-bottom: $spacing-2xl;
-  
+
   h2 {
     margin-bottom: $spacing-lg;
     color: $color-primary;
   }
-  
+
   p {
     margin-bottom: $spacing-md;
     line-height: 1.6;
@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $spacing-lg;
-  
+
   @media (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
   }
@@ -34,7 +34,7 @@
 
 .card {
   height: 100%;
-  
+
   h3 {
     color: $color-primary;
     margin-bottom: $spacing-sm;
@@ -47,15 +47,15 @@
   gap: $spacing-md;
   list-style-type: none;
   padding: 0;
-  
+
   @media (max-width: $breakpoint-md) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (max-width: $breakpoint-sm) {
     grid-template-columns: 1fr;
   }
-  
+
   li {
     background-color: $color-background-alt;
     padding: $spacing-md;

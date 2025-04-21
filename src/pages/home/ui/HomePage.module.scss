@@ -7,11 +7,11 @@
 .hero {
   text-align: center;
   padding: $spacing-2xl 0;
-  
+
   h1 {
     font-size: $font-size-4xl;
     margin-bottom: $spacing-md;
-    
+
     @media (max-width: $breakpoint-md) {
       font-size: $font-size-3xl;
     }
@@ -23,7 +23,7 @@
   color: $color-text-secondary;
   max-width: 600px;
   margin: 0 auto;
-  
+
   @media (max-width: $breakpoint-md) {
     font-size: $font-size-lg;
   }
@@ -42,11 +42,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $spacing-lg;
-  
+
   @media (max-width: $breakpoint-lg) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
   }
@@ -57,7 +57,7 @@
     margin-bottom: $spacing-sm;
     color: $color-primary;
   }
-  
+
   p {
     color: $color-text-secondary;
   }
@@ -72,11 +72,11 @@
   max-width: 700px;
   margin: 0 auto;
   padding: $spacing-2xl $spacing-xl;
-  
+
   h2 {
     margin-bottom: $spacing-md;
   }
-  
+
   p {
     margin-bottom: $spacing-xl;
     color: $color-text-secondary;
@@ -87,7 +87,7 @@
   display: flex;
   justify-content: center;
   gap: $spacing-md;
-  
+
   @media (max-width: $breakpoint-md) {
     flex-direction: column;
     align-items: center;

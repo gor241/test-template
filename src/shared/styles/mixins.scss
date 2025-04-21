@@ -23,9 +23,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-
- @else {
+  } @else {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $lines;
@@ -38,27 +36,19 @@
     @media (min-width: $breakpoint-sm) {
       @content;
     }
-  }
-
- @else if $breakpoint == 'md' {
+  } @else if $breakpoint == 'md' {
     @media (min-width: $breakpoint-md) {
       @content;
     }
-  }
-
- @else if $breakpoint == 'lg' {
+  } @else if $breakpoint == 'lg' {
     @media (min-width: $breakpoint-lg) {
       @content;
     }
-  }
-
- @else if $breakpoint == 'xl' {
+  } @else if $breakpoint == 'xl' {
     @media (min-width: $breakpoint-xl) {
       @content;
     }
-  }
-
- @else if $breakpoint == '2xl' {
+  } @else if $breakpoint == '2xl' {
     @media (min-width: $breakpoint-2xl) {
       @content;
     }
@@ -72,11 +62,11 @@
   padding: $spacing-sm $spacing-lg;
   border-radius: $border-radius-md;
   font-weight: $font-weight-medium;
-  
+
   &:hover:not(:disabled) {
     background-color: $hover-bg-color;
   }
-  
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba($bg-color, 0.4);
@@ -89,17 +79,17 @@
   border: 1px solid $color-border;
   border-radius: $border-radius-md;
   transition: $transition-base;
-  
+
   &:focus {
     outline: none;
     border-color: $color-primary;
     box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
   }
-  
+
   &::placeholder {
     color: $color-text-muted;
   }
-  
+
   &:disabled {
     background-color: $color-background-alt;
     cursor: not-allowed;

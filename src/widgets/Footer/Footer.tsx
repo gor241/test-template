@@ -2,13 +2,9 @@ import { FC } from 'react';
 import { Container } from '@/shared/ui';
 import styles from './Footer.module.scss';
 
-export interface FooterProps {
-  className?: string;
-}
-
-export const Footer: FC<FooterProps> = ({ className }) => {
+export const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className={styles.footer}>
       <Container>
@@ -16,7 +12,7 @@ export const Footer: FC<FooterProps> = ({ className }) => {
           <div className={styles.copyright}>
             &copy; {currentYear} FSD Starter. Все права защищены.
           </div>
-          
+
           <div className={styles.links}>
             <a href="#" className={styles.link}>
               Политика конфиденциальности
@@ -29,4 +25,4 @@ export const Footer: FC<FooterProps> = ({ className }) => {
       </Container>
     </footer>
   );
-}; 
+};
